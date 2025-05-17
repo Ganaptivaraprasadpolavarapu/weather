@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌤️ Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header-bar">
+      <h1 class="header">🌤️ Weather Forecast</h1>
+      <button id="toggle-theme" onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="city-input" placeholder="Enter city name..." />
+      <button onclick="getWeather()">Search</button>
+    </div>
+
+    <div class="loading" id="loading">⏳ Fetching weather data...</div>
+    <div class="error" id="error"></div>
+
+    <div class="weather-info" id="weather-info">
+      <div class="current-weather">
+        <div class="left">
+          <h2 id="city-name">City Name</h2>
+          <p id="date">Date</p>
+          <p id="weather-description">Weather Description</p>
+        </div>
+        <div class="right">
+          <span id="temperature" class="temperature">0°C</span>
+          <img id="weather-icon" class="weather-icon" src="/" alt="Weather Icon" />
+        </div>
+      </div>
+
+      <div class="weather-details">
+        <div class="detail-box"><h3>🌡️ Feels Like</h3><p id="feels-like">0°C</p></div>
+        <div class="detail-box"><h3>💧 Humidity</h3><p id="humidity">0%</p></div>
+        <div class="detail-box"><h3>🌬️ Wind Speed</h3><p id="wind-speed">0 km/h</p></div>
+        <div class="detail-box"><h3>🌞 UV Index</h3><p id="uv-index">0</p></div>
+      </div>
+
+      <h2 class="section-title">🕒 Hourly Forecast (Today)</h2>
+      <div class="forecast hourly" id="hourly-forecast"></div>
+
+      <h2 class="section-title">🔮 3-Day Forecast</h2>
+      <div class="forecast" id="forecast"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
